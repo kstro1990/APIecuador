@@ -5,10 +5,10 @@ class Autenticacion
   {
     try {
       $auth = new stdClass();
-      $auth->login = 'd8a5686c096369212235123c91c791ba';
+      $auth->login = 'LOGIN';
       $auth->nonce =  "VMI5FKXWIPDMTT5FKUR"; //'abc123toma';
       $auth->seed = date('c');
-      $auth->tranKey = base64_encode(hash('sha256', $auth->nonce . $auth->seed . "uT84b8Ifs8xoITpw" , true));
+      $auth->tranKey = base64_encode(hash('sha256', $auth->nonce . $auth->seed . "TRANKEY" , true));
       // $auth->escrito = ($auth->nonce.$auth->seed."yOE5h0US32Wd3c7D");
       // $auth->solo=sha1($auth->nonce . $auth->seed . "yOE5h0US32Wd3c7D" ,false);
       // $auth->tranKey = base64_encode(sha1( $auth->escrito, true));

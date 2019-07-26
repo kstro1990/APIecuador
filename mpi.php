@@ -65,8 +65,23 @@ class Mpi
 
 }
 
-$new = new Mpi();
-$resultado = $new ->query();
+if(isset($_POST['action']) && !empty($_POST['action'])) {
+    $new = new Mpi();
+    $action = $_POST['action'];
+    switch($action) {
+        case 'lookup' :
+        $resultado = $new ->lookup();
+        echo $resultado;
+        break;
+        case 'query' :
+        $resultado = $new ->query();
+        echo $resultado;
+        break;
+        // ...etc...
+    }
+}
 
-var_dump($resultado);
+// $new = new Mpi();
+// $resultado = $new ->lookup();
+// var_dump($resultado);
  ?>

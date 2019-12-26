@@ -10,7 +10,7 @@ include('autenticacion.php');
 // $denco= json_encode($request);
 
 $new = new Autenticacion();
-$resultado = $new ->auth();
+$resultado = $new->auth();
 
 
 $denco= json_encode($resultado);

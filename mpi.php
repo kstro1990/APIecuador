@@ -65,13 +65,17 @@ class Mpi
 
 }
 
+// idthre
+// tdc $_POST['tdc'];
+// if((isset($_POST['action']) && !empty($_POST['action']))&& (isset($_POST['tdc']) && !empty($_POST['tdc']))) {
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     $new = new Mpi();
     $action = $_POST['action'];
     switch($action) {
         case 'lookup' :
-        $resultado = $new ->lookup();
-        echo $resultado;
+        //$resultado= $_POST['tdc'];
+        //$resultado = $new ->lookup();
+        echo var_dump($_POST);
         break;
         case 'query' :
         $resultado = $new ->query();

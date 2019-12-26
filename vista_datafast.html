@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Checkout example · Bootstrap</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Favicons -->
+    <!-- <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.4/assets/img/favicons/favicon.ico"> -->
+    <meta name="msapplication-config" content="https://getbootstrap.com/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+<!-- container del app -->
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="https://www.evertecinc.com/images/evertec-logo.png" alt="" width="320" height="72">
+    <h2>Creditos DataFast</h2>
+    <p class="lead">Para configurar los tipos de creditos debe ingresar los installments en los input de los credito deseados para agregar, tener en cuenta que debe estar separadoro por comas ",". Ejemplo (3,6,9,12,24,32,42)</p>
+  </div>
+<!--  primer ROW  -->
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Regla de tipos de Creditos</span>
+        <span class="badge badge-secondary badge-pill"></span>
+      </h4>
+      <!-- json string  -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <!-- contenido -->
+          <div class="section">
+            <div class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <p class="card-text">{"include":[{"code":0,"groupCode":"P","type":"02","installments":[0,1,2,3]},{"code":0,"groupCode":"P","type":"02","installments":[0,1,2,3]}]}</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- tipo de creditos cuerpo  -->
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Tipo de creditos</h4>
+      <form class="needs-validation" novalidate>
+        <!-- <div class="mb-3">
+          <label for="description">Corriente</label>
+          <input type="text" class="form-control" id="Credito" placeholder="tipo de credito">
+        </div> -->
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="corriente">Corriente</label>
+            <select class="custom-select d-block w-100" id="corriente" required>
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+        </div>
+
+        <!-- Diferido con intereses grupo "P" -->
+        <hr class="mb-4">
+        <div class="mb-3">
+          <label for="creditoP0">Diferido con interés</label>
+          <input type="text" class="form-control" id="creditoP0" placeholder="tipo de credito">
+        </div>
+        <div class="mb-3">
+          <label for="creditoP1">Diferido 1 mes gracia con interés</label>
+          <input type="text" class="form-control" id="creditoP1" placeholder="tipo de credito">
+        </div>
+        <div class="mb-3">
+          <label for="creditoP2">Diferido 2 meses gracia con interés</label>
+          <input type="text" class="form-control" id="creditoP2" placeholder="tipo de credito">
+        </div>
+        <div class="mb-3">
+          <label for="creditoP3">Diferido 3 meses gracia con interés</label>
+          <input type="text" class="form-control" id="creditoP3" placeholder="tipo de credito">
+        </div>
+        <!-- direrido sin interese grupo "D" -->
+        <hr class="mb-4">
+        <div class="mb-3">
+          <label for="creditoD0">Diferido sin interés</label>
+          <input type="text" class="form-control" id="creditoD0" placeholder="tipo de credito">
+        </div>
+        <div class="mb-3">
+          <label for="creditoD1">Diferido 1 mes gracia sin interés</label>
+          <input type="text" class="form-control" id="creditoD1" placeholder="tipo de credito">
+        </div>
+        <div class="mb-3">
+          <label for="creditoD2">Diferido 2 meses gracia sin interés</label>
+          <input type="text" class="form-control" id="creditoD2" placeholder="tipo de credito">
+        </div>
+        <div class="mb-3">
+          <label for="creditoD3">Diferido 3 meses gracia sin interés</label>
+          <input type="text" class="form-control" id="creditoD3" placeholder="tipo de credito">
+        </div>
+        <!-- linea separadora  -->
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="postCredito()">Generar</button>
+      </form>
+    </div>
+  </div>
+  <!-- contenido -->
+<!-- piede de pagina -->
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2019 Luis Castro</p>
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Datafast.js"></script>
+<script src="form-validation.js"></script>
+<script type="text/javascript" src="Datafast.js"></script>
+</body>
+</html>

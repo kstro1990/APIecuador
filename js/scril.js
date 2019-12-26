@@ -1,4 +1,4 @@
-function toma(){
+function mpi(){
   $.ajax(
   {
     url: 'mpi.php',

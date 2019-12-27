@@ -59,12 +59,12 @@
           <!-- contenido -->
           <div class="section">
             <div class="text-center">
-              <div class="spinner-border" role="status">
+              <!-- <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
-              </div>
+              </div> -->
             </div>
           </div>
-          <p class="card-text">{"include":[{"code":0,"groupCode":"P","type":"02","installments":[0,1,2,3]},{"code":0,"groupCode":"P","type":"02","installments":[0,1,2,3]}]}</p>
+          <!-- <p class="card-text">{"include":[{"code":0,"groupCode":"P","type":"02","installments":[0,1,2,3]},{"code":0,"groupCode":"P","type":"02","installments":[0,1,2,3]}]}</p> -->
         </div>
       </div>
 
@@ -94,37 +94,37 @@
         <hr class="mb-4">
         <div class="mb-3">
           <label for="creditoP0">Diferido con interés</label>
-          <input type="text" class="form-control" id="creditoP0" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoP0" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <div class="mb-3">
           <label for="creditoP1">Diferido 1 mes gracia con interés</label>
-          <input type="text" class="form-control" id="creditoP1" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoP1" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <div class="mb-3">
           <label for="creditoP2">Diferido 2 meses gracia con interés</label>
-          <input type="text" class="form-control" id="creditoP2" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoP2" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <div class="mb-3">
           <label for="creditoP3">Diferido 3 meses gracia con interés</label>
-          <input type="text" class="form-control" id="creditoP3" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoP3" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <!-- direrido sin interese grupo "D" -->
         <hr class="mb-4">
         <div class="mb-3">
           <label for="creditoD0">Diferido sin interés</label>
-          <input type="text" class="form-control" id="creditoD0" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoD0" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <div class="mb-3">
           <label for="creditoD1">Diferido 1 mes gracia sin interés</label>
-          <input type="text" class="form-control" id="creditoD1" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoD1" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <div class="mb-3">
           <label for="creditoD2">Diferido 2 meses gracia sin interés</label>
-          <input type="text" class="form-control" id="creditoD2" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoD2" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <div class="mb-3">
           <label for="creditoD3">Diferido 3 meses gracia sin interés</label>
-          <input type="text" class="form-control" id="creditoD3" placeholder="tipo de credito">
+          <input type="text" class="form-control" id="creditoD3" placeholder="tipo de credito" onblur='validate(this);'>
         </div>
         <!-- linea separadora  -->
         <hr class="mb-4">
@@ -138,9 +138,9 @@
     <p class="mb-1">&copy; 2019 Luis Castro</p>
   </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-<script type="text/javascript" src="Datafast.js"></script>
 <script src="form-validation.js"></script>
 <script type="text/javascript" src="Datafast.js"></script>
 </body>

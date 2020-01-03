@@ -37,7 +37,7 @@ class Filtro_tipo_Credito
             if ($valor == 'si') {
               $array[]=[
               'code'=>'0',
-              'groupCode'=>'0',
+              'groupCode'=>'C',
               'type'=>'00',
               'installments'=>['0']];
             }
@@ -128,7 +128,7 @@ class Filtro_tipo_Credito
     }
 // print_r($array);die();
 // "include" es la llave para el array
-    $Datafast->include= [$array];
+    $Datafast->include= $array;
     return $Datafast ;
   }
 }
